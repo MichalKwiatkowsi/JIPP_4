@@ -1,64 +1,63 @@
-// Klasa bazowa - jedzenie
-public class Jedzenie {
-    protected String nazwa;
 
-    public Jedzenie(String nazwa) {
-        this.nazwa = nazwa;
+public class Cars {
+    protected String model;
+
+    public Cars(String model) {
+        this.model = model;
     }
 
-    public String getNazwa() {
-        return nazwa;
+    public String getModel() {
+        return model;
     }
 
-    public void opis() {
+    public void description() {
         System.out.println("Popular cars");
     }
 }
 
-// Klasa dziedzicząca - owoce
-class Porche extends Jedzenie {
-    public Porche(String nazwa) {
-        super(nazwa);
+class Porche extends Cars {
+    public Porche(String model) {
+        super(model);
     }
 
     @Override
-    public void opis() {
-        System.out.println("The most popular model of Porche is Porche 911");
+    public void description() {
+        System.out.println("The most popular model of Porche's cars is Porche 911");
     }
 }
 
-// Klasa dziedzicząca - warzywa
-class Warzywa extends Jedzenie {
-    public Warzywa(String nazwa) {
-        super(nazwa);
+
+class Mercedes extends Cars {
+    public Mercedes(String model) {
+        super(model);
     }
 
     @Override
-    public void opis() {
-        System.out.println("Warzywa to jadalne części roślin, niekoniecznie słodkie.");
+    public void description() {
+        System.out.println("The most popular model of Mercede's cars is Mercedes class A ");
     }
 }
 
-// Klasa dziedzicząca - mięso
-class Mięso extends Jedzenie {
-    public Mięso(String nazwa) {
-        super(nazwa);
+
+class Toyota extends Cars {
+    public Toyota(String model) {
+        super(model);
     }
 
     @Override
-    public void opis() {
-        System.out.println("Mięso to tkanka mięśniowa zwierząt.");
+    public void description() {
+        System.out.println("The most popular model of Toyota's cars is Toyota Corolla");
     }
 }
 
-// Klasa dziedzicząca - fast food
-class FastFood extends Jedzenie {
-    public FastFood(String nazwa) {
-        super(nazwa);
+
+class Ford extends Cars {
+    public Ford(String model) {
+        super(model);
     }
 
     @Override
-    public void opis() {
-        System.out.println("Fast food to dania szybkiej obsługi, często o wysokiej zawartości tłuszczu i kalorii.");
+    public void description() {
+        System.out.println("The most popular model of Ford's cars is Ford Mustang");
     }
 }
